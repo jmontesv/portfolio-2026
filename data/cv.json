@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "lastUpdated": "2026-04-01",
+    "version": "1.0.1"
+  },
+  "personal": {
+    "name": "Javier Montes Villamarín",
+    "title": "Desarrollador Fullstack Junior",
+    "bio": "Desarrollador Fullstack Junior especializado en Python y JavaScript, con experiencia en React, Flask y SQL. Actualmente profundizo en crear proyectos completos con estas tecnologías. Busco crecer en entornos ágiles donde pueda aportar valor y seguir desarrollándome profesionalmente.",
+    "location": "Toledo, España"
+  },
+  "contact": {
+    "email": "javiermontes97@gmail.com",
+    "phone": "+34 691 747 212",
+    "github": "https://github.com/jmontesv",
+    "linkedin": "https://www.linkedin.com/in/javier-montes-villamarin/"
+  },
+  "experience": [
+    {
+      "id": "exp-1",
+      "company": "Freelance",
+      "role": "Junior Fullstack Developer",
+      "location": "Toledo, España",
+      "startDate": "2022-08",
+      "endDate": null,
+      "current": true,
+      "description": "Desarrollo de APIs RESTful y funcionalidades backend con Python (Flask), aplicando principios de arquitectura por capas. Implementación de sistemas de gestión de datos con Firestore y SQL. Construcción de interfaces web interactivas con React, Vite y ShadCN. Despliegue y mantenimiento de proyectos en Render y Vercel.",
+      "technologies": [
+        "Python",
+        "Flask",
+        "React",
+        "Vite",
+        "ShadCN",
+        "Firestore",
+        "SQL",
+        "Vercel",
+        "Render"
+      ]
+    },
+    {
+      "id": "exp-2",
+      "company": "Woffu",
+      "role": "Junior Frontend Developer",
+      "location": "Barcelona (remoto)",
+      "startDate": "2021-05",
+      "endDate": "2021-08",
+      "current": false,
+      "description": "Desarrollo de interfaces web y móviles con React y React Native. Participación en la migración de Angular a React. Implementación de nuevas funcionalidades y optimización de componentes reutilizables.",
+      "technologies": [
+        "React",
+        "React Native",
+        "Angular"
+      ]
+    },
+    {
+      "id": "exp-3",
+      "company": "Indra",
+      "role": "Junior Frontend Developer",
+      "location": "Alcobendas, Madrid",
+      "startDate": "2018-10",
+      "endDate": "2019-01",
+      "current": false,
+      "description": "Formación práctica en Angular 6 bajo mentoría senior. Desarrollo de la UI de una aplicación interna, aplicando buenas prácticas de desarrollo frontend y diseño de interfaces.",
+      "technologies": [
+        "Angular"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj-1",
+      "name": "Sistema de reservas de viajes",
+      "description": "Sistema de reservas de viajes con Python (Flask) en el backend y React en el frontend. Arquitectura por capas con separación de responsabilidades entre interfaz, lógica de negocio y acceso a datos.",
+      "technologies": [
+        "Python",
+        "Flask",
+        "React"
+      ],
+      "url": null,
+      "demo": null,
+      "status": "en desarrollo",
+      "featured": true
+    },
+    {
+      "id": "proj-2",
+      "name": "Sistema de reservas de pádel",
+      "description": "Sistema completo de reservas de pistas de pádel con Python (Flask) y Firestore. Incluye autenticación con Firebase Authentication y diseño modular por capas.",
+      "technologies": [
+        "Python",
+        "Flask",
+        "Firestore",
+        "Firebase Authentication"
+      ],
+      "url": null,
+      "demo": null,
+      "status": "en desarrollo",
+      "featured": true
+    },
+    {
+      "id": "proj-3",
+      "name": "Portfolio",
+      "description": "Portfolio personal desarrollado con React y Vite, mostrando proyectos y habilidades técnicas. Diseño responsive y moderno con componentes reutilizables.",
+      "technologies": [
+        "React",
+        "Vite",
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "url": null,
+      "demo": null,
+      "status": "en desarrollo",
+      "featured": false
+    }
+  ],
+  "skills": {
+    "languages": [
+      "Python",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "SQL"
+    ],
+    "frameworks": [
+      "React",
+      "Flask",
+      "React Native",
+      "Vite",
+      "ShadCN",
+      "Angular"
+    ],
+    "tools": [
+      "Git",
+      "Firestore",
+      "Firebase",
+      "Vercel",
+      "Render",
+      "Docker"
+    ],
+    "other": [
+      "REST APIs",
+      "Arquitectura por capas",
+      "Agile"
+    ]
+  },
+  "education": [
+    {
+      "id": "edu-1",
+      "institution": "Conquer Blocks",
+      "degree": "Máster en Desarrollo Fullstack",
+      "startDate": "2025-04",
+      "endDate": null,
+      "current": true,
+      "description": null
+    },
+    {
+      "id": "edu-2",
+      "institution": "Escuela de Organización Industrial",
+      "degree": "Curso de Python, Algoritmos y Estructuras de Datos para IA",
+      "startDate": "2025-02",
+      "endDate": "2025-04",
+      "current": false,
+      "description": null
+    },
+    {
+      "id": "edu-3",
+      "institution": "IES Ribera del Tajo",
+      "degree": "CFGS Administración de Sistemas Informáticos en Red",
+      "startDate": "2016-09",
+      "endDate": "2018-06",
+      "current": false,
+      "description": null
+    },
+    {
+      "id": "edu-4",
+      "institution": "IES Ribera del Tajo",
+      "degree": "CFGM Sistemas Microinformáticos y Redes",
+      "startDate": "2013-09",
+      "endDate": "2015-12",
+      "current": false,
+      "description": null
+    }
+  ]
+}

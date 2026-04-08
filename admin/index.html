@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin · Portfolio JMV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav>
+    <span class="nav-logo">// admin · portfolio</span>
+    <span class="nav-meta">cv.json v<span id="nav-version">—</span></span>
+  </nav>
+
+  <div class="workspace">
+
+    <!-- CHAT -->
+    <div class="chat-panel">
+      <div class="chat-header">// chat con ia · describe los cambios en lenguaje natural</div>
+
+      <div class="messages" id="messages">
+        <div class="msg assistant">
+          <span class="msg-label">ia</span>
+          <div class="msg-bubble">
+            Hola Javier 👋 Soy tu asistente de CV. Puedo leer tu <code>cv.json</code> actual y modificarlo según lo que me pidas.<br><br>
+            Prueba con algo como: <em>"Añade un nuevo proyecto llamado Portfolio con React"</em> o <em>"Actualiza mi bio"</em>.
+          </div>
+        </div>
+      </div>
+
+      <div class="chat-input-area">
+        <div class="suggestions">
+          <button class="suggestion" onclick="useSuggestion(this)">Añadir proyecto</button>
+          <button class="suggestion" onclick="useSuggestion(this)">Nueva experiencia</button>
+          <button class="suggestion" onclick="useSuggestion(this)">Actualizar bio</button>
+          <button class="suggestion" onclick="useSuggestion(this)">Añadir skill</button>
+          <button class="suggestion" onclick="useSuggestion(this)">Nueva formación</button>
+        </div>
+        <div class="input-row">
+          <textarea
+            id="user-input"
+            placeholder="Describe el cambio que quieres hacer en tu CV…"
+            onkeydown="handleKey(event)"
+            oninput="autoResize(this)"
+          ></textarea>
+          <button class="send-btn" id="send-btn" onclick="sendMessage()">Enviar ↗</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- JSON PANEL -->
+    <div class="json-panel">
+      <div class="json-header">
+        <span class="json-title">// cv.json</span>
+        <div class="json-actions">
+          <button class="action-btn" onclick="resetJson()">Descartar</button>
+          <button class="action-btn primary" onclick="applyJson()">Aplicar cambios ↗</button>
+        </div>
+      </div>
+      <textarea id="json-editor" spellcheck="false" oninput="validateJson()"></textarea>
+      <div class="json-status">
+        <span id="json-validity" class="status-ok">✓ JSON válido</span>
+        <span id="json-version"></span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
