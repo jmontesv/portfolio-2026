@@ -7,7 +7,12 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app, origins=["http://localhost:5500", "http://127.0.0.1:5500"])
+CORS(app, origins=[
+    "http://localhost:5500", 
+    "http://127.0.0.1:5500"
+    "https://jmontesv.github.io",
+    "https://portfolio-2026.vercel.app"
+])
 
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
 ANTHROPIC_URL = "https://api.anthropic.com/v1/messages"

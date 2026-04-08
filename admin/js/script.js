@@ -39,7 +39,7 @@ async function applyJson() {
   try {
     const parsed = JSON.parse(document.getElementById('json-editor').value);
 
-    const res = await fetch('http://localhost:5000/api/save-cv', {
+    const res = await fetch('https://portfolio-2026-rx73.onrender.com/api/save-cv', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(parsed)
@@ -150,7 +150,7 @@ Reglas:
     const userPrompt = `CV actual:\n${JSON.stringify(currentCV, null, 2)}\n\nInstrucción: ${text}`;
 
     try {
-        const res = await fetch('http://localhost:5000/api/chat', {
+        const res = await fetch('https://portfolio-2026-rx73.onrender.com/api/chat', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
