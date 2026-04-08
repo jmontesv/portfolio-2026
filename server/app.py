@@ -46,13 +46,40 @@ def save_cv():
     if not data:
         return jsonify({"error": "Body vacío"}), 400
 
-    cv_path = os.path.join(os.path.dirname(__file__), "../data/cv.json")
+    token = os.getenv("GITHUB_TOKEN")
+    repo  = os.getenv("GITHUB_REPO")
 
-    with open(cv_path, "w", encoding="utf-8") as f:
-        import json
-        json.dump(data, f, ensure_ascii=False, indent=2)
+    if not token or not repo:
+        return jsonify({"error": "GitHub no configurado"}), 500
 
-    return jsonify({"ok": True}), 200
+    import json, base64, requests as req
+
+    api_url = f"https://api.github.com/repos/{repo}/contents/data/cv.json"
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Accept": "application/vnd.github+json"
+    }
+
+    # Obtener el SHA actual del archivo (necesario para actualizarlo)
+    get_res = req.get(api_url, headers=headers)
+    sha = get_res.json().get("sha")
+
+    content = base64.b64encode(
+        json.dumps(data, ensure_ascii=False, indent=2).encode("utf-8")
+    ).decode("utf-8")
+
+    payload = {
+        "message": f"cv: actualización v{data.get('meta', {}).get('version', '?')}",
+        "content": content,
+        "sha": sha
+    }
+
+    put_res = req.put(api_url, headers=headers, json=payload)
+
+    if put_res.status_code in (200, 201):
+        return jsonify({"ok": True}), 200
+    else:
+        return jsonify({"error": put_res.json()}), 500
 
 
 if __name__ == "__main__":
