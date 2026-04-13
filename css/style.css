@@ -89,8 +89,19 @@ nav .container {
 
 /* ── HERO ── */
 #hero {
+    text-align: center;
     padding: 140px 0 100px;
     border-bottom: 1px solid var(--border);
+}
+
+#hero-avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    border: 1px solid #2a2a2a;
+    filter: grayscale(50%);
 }
 
 .hero-label {
@@ -123,11 +134,14 @@ nav .container {
     max-width: 540px;
     color: var(--muted);
     font-size: 15px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 2.5rem;
 }
 
 .hero-links {
     display: flex;
+    justify-content: center;
     gap: 1rem;
     flex-wrap: wrap;
 }
