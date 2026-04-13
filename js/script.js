@@ -16,7 +16,7 @@ async function loadCV() {
 
     // Hero
     const h1 = document.getElementById('hero-name');
-    h1.innerHTML = `Hola, soy<br><span>${cv.personal.name}</span>`;
+    h1.innerHTML = `Hola, soy<br><div class="clip-wrap"><span class="clip-inner" id="hero-name-inner"><span>${cv.personal.name}</span></span></div>`;
     document.getElementById('hero-bio').textContent = cv.personal.bio;
     document.title = `${cv.personal.name} · ${cv.personal.title}`;
 
@@ -104,6 +104,16 @@ async function loadCV() {
 
     // Footer
     document.getElementById('last-updated').textContent = cv.meta.lastUpdated;
+    
+    function playHeroAnim() {
+      const label = document.querySelector('.hero-label');
+      const name  = document.getElementById('hero-name-inner');
+      const bio   = document.getElementById('hero-bio');
+      setTimeout(() => label.classList.add('go'), 100);
+      setTimeout(() => name.classList.add('go'), 300);
+      setTimeout(() => bio.classList.add('go'), 600);
+    }
+    playHeroAnim();
 }
 
 loadCV().catch(err => console.error('Error cargando cv.json:', err));

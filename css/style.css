@@ -111,6 +111,12 @@ nav .container {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     margin-bottom: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.6s ease 0.2s;
+}
+
+.hero-label.go {
+  opacity: 1;
 }
 
 #hero-name span {
@@ -139,11 +145,19 @@ nav .container {
     margin-bottom: 2.5rem;
 }
 
+.hero-bio.go {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .hero-links {
     display: flex;
     justify-content: center;
     gap: 1rem;
     flex-wrap: wrap;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.6s ease 0.8s, transform 0.6s ease 0.8s;
 }
 
 .btn {
@@ -177,6 +191,23 @@ nav .container {
     background: var(--accent-dim);
     border-color: var(--accent-dim);
     color: #0e0e0e;
+}
+
+.clip-wrap {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+
+.clip-inner {
+  display: inline-block;
+  transform: translateY(110%);
+  transition: transform 0s;
+}
+
+.clip-inner.go {
+  transform: translateY(0);
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* ── SECTIONS ── */
