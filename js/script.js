@@ -15,9 +15,10 @@ async function loadCV() {
     const cv = await res.json();
 
     // Hero
-    const h1 = document.getElementById('hero-name');
+    const h1 = document.getElementById('hero-name');  
     h1.innerHTML = `Hola, soy<br><div class="clip-wrap"><span class="clip-inner" id="hero-name-inner"><span>${cv.personal.name}</span></span></div>`;
-    document.getElementById('hero-bio').textContent = cv.personal.bio;
+    const bio = document.getElementById('hero-bio');
+    bio.textContent = cv.personal.bio;
     document.title = `${cv.personal.name} · ${cv.personal.title}`;
 
     const links = document.getElementById('hero-links');
@@ -109,9 +110,16 @@ async function loadCV() {
       const label = document.querySelector('.hero-label');
       const name  = document.getElementById('hero-name-inner');
       const bio   = document.getElementById('hero-bio');
-      setTimeout(() => label.classList.add('go'), 100);
-      setTimeout(() => name.classList.add('go'), 300);
-      setTimeout(() => bio.classList.add('go'), 600);
+      const links = document.getElementById('hero-links');
+      
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          setTimeout(() => label.classList.add('go'), 100);
+          setTimeout(() => name.classList.add('go'),  300);
+          setTimeout(() => bio.classList.add('go'),   600);
+          setTimeout(() => links.classList.add('go'), 900);
+        });
+      });
     }
     playHeroAnim();
 }
