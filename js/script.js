@@ -21,10 +21,11 @@ function scrambleName() {
     el.textContent = target.split('').map((c, i) => {
       if (c === ' ') return ' ';
       if (i < iteration) return target[i];
+      if (Math.random() < 0.15) return target[i];
       return chars[Math.floor(Math.random() * chars.length)];
     }).join('');
     if (iteration >= target.length) clearInterval(el._timer);
-    iteration += 0.4;
+    iteration += 0.5;
   }, 40);
 }
 
