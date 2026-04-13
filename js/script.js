@@ -10,6 +10,24 @@ function renderTags(arr) {
     return arr.map(t => `<span class="tag">${t}</span>`).join('');
 }
 
+function scrambleName() {
+  const el = document.querySelector('#hero-name span');
+  if (!el) return;
+  const target = el.textContent;
+  const chars = 'abcdefghijklmnopqrstuvwxyz';
+  let iteration = 0;
+  clearInterval(el._timer);
+  el._timer = setInterval(() => {
+    el.textContent = target.split('').map((c, i) => {
+      if (c === ' ') return ' ';
+      if (i < iteration) return target[i];
+      return chars[Math.floor(Math.random() * chars.length)];
+    }).join('');
+    if (iteration >= target.length) clearInterval(el._timer);
+    iteration += 0.4;
+  }, 40);
+}
+
 async function loadCV() {
     const res = await fetch('data/cv.json');
     const cv = await res.json();
@@ -107,3 +125,4 @@ async function loadCV() {
 }
 
 loadCV().catch(err => console.error('Error cargando cv.json:', err));
+setTimeout(scrambleName, 300);
