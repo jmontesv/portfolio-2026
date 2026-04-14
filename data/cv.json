@@ -1,12 +1,12 @@
 {
   "meta": {
-    "lastUpdated": "2026-04-08",
-    "version": "1.0.2"
+    "lastUpdated": "2026-04-14",
+    "version": "1.0.3"
   },
   "personal": {
     "name": "Javier Montes Villamarín",
     "title": "Desarrollador Fullstack Junior",
-    "bio": "Desarrollador Fullstack Junior especializado en Python y JavaScript, con experiencia en React, Flask y SQL. Actualmente profundizo en crear proyectos completos con estas tecnologías. Busco crecer en entornos ágiles donde pueda aportar valor y seguir desarrollándome profesionalmente.",
+    "bio": "Desarrollador Fullstack Junior especializado en Python y JavaScript, con experiencia en React y Angular. Actualmente profundizo en crear proyectos completos con estas tecnologías. Busco crecer en entornos ágiles donde pueda aportar valor y seguir desarrollándome profesionalmente.",
     "location": "Toledo, España"
   },
   "contact": {
@@ -24,7 +24,7 @@
       "startDate": "2022-08",
       "endDate": null,
       "current": true,
-      "description": "Desarrollo de APIs RESTful y funcionalidades backend con Python (Flask), aplicando principios de arquitectura por capas. Implementación de sistemas de gestión de datos con Firestore y SQL. Construcción de interfaces web interactivas con React, Vite y ShadCN. Despliegue y mantenimiento de proyectos en Render y Vercel.",
+      "description": "Desarrollo de APIs RESTful y funcionalidades backend con Python (Flask y Django). Implementación de sistemas de gestión de datos con Firestore y SQL. Construcción de interfaces web interactivas con React, Vite y ShadCN. Despliegue y mantenimiento de proyectos en Render y Vercel.",
       "technologies": [
         "Python",
         "Flask",
@@ -34,7 +34,10 @@
         "Firestore",
         "SQL",
         "Vercel",
-        "Render"
+        "Render",
+        "Django",
+        "Tailwind",
+        "Docker"
       ]
     },
     {
@@ -45,11 +48,10 @@
       "startDate": "2021-05",
       "endDate": "2021-08",
       "current": false,
-      "description": "Desarrollo de interfaces web y móviles con React y React Native. Participación en la migración de Angular a React. Implementación de nuevas funcionalidades y optimización de componentes reutilizables.",
+      "description": "Desarrollo de interfaces web y móviles con React y React Native bajo metodología SCRUM. Participación en la migración de Angular a React. Implementación de nuevas funcionalidades, corrección de bugs y optimización de componentes reutilizables.",
       "technologies": [
         "React",
-        "React Native",
-        "Angular"
+        "React Native"
       ]
     },
     {
@@ -69,62 +71,39 @@
   "projects": [
     {
       "id": "proj-1",
-      "name": "Sistema de reservas de viajes",
-      "description": "Sistema de reservas de viajes con Python (Flask) en el backend y React en el frontend. Arquitectura por capas con separación de responsabilidades entre interfaz, lógica de negocio y acceso a datos.",
+      "name": "Sistema de inventario",
+      "description": "Sistema de gestión de inventario desarrollado con Django y Tailwind CSS. Incluye control de stock mediante movimientos, dashboard con métricas visuales, importación/exportación CSV y sistema de autenticación con roles.",
       "technologies": [
-        "Python",
-        "Flask",
-        "React"
+        "Django",
+        "Tailwind",
+        "SQLite",
+        "Docker",
+        "Render",
+        "JavaScript",
+        "Chart.js"
       ],
-      "url": null,
-      "demo": null,
-      "status": "en desarrollo",
+      "url": "https://github.com/jmontesv/sistema-inventario",
+      "demo": "https://sistema-inventario-9vkg.onrender.com/",
+      "status": "Terminado",
       "featured": true
     },
     {
       "id": "proj-2",
-      "name": "Sistema de reservas de pádel",
-      "description": "Sistema completo de reservas de pistas de pádel con Python (Flask) y Firestore. Incluye autenticación con Firebase Authentication y diseño modular por capas.",
-      "technologies": [
-        "Python",
-        "Flask",
-        "Firestore",
-        "Firebase Authentication"
-      ],
-      "url": null,
-      "demo": null,
-      "status": "en desarrollo",
-      "featured": true
-    },
-    {
-      "id": "proj-3",
-      "name": "Portfolio",
-      "description": "Portfolio personal desarrollado con React y Vite, mostrando proyectos y habilidades técnicas. Diseño responsive y moderno con componentes reutilizables.",
-      "technologies": [
-        "React",
-        "Vite",
-        "HTML",
-        "CSS",
-        "JavaScript"
-      ],
-      "url": null,
-      "demo": null,
-      "status": "en desarrollo",
-      "featured": false
-    },
-    {
-      "id": "proj-4",
-      "name": "Sistema de inventario",
-      "description": "Sistema de inventario creado con Django y Tailwind.",
+      "name": "Gestor de tareas avanzado",
+      "description": "Aplicación tipo Trello minimalista y moderna, desarrollada con Django y PostgreSQL. Cuenta con las siguientes características: Autenticación de usuarios, boards colaborativos con miembros, columnas reordenables (Drag & Drop), tareas movibles entre columnas, persistencia de orden en base de datos, dashboard con progreso por board, exportación de tareas a CSV, envío de emails con Resend, interfaz moderna con TailwindCSS y control de permisos por usuario.",
       "technologies": [
         "Django",
-        "Tailwind"
+        "Tailwind",
+        "PostgreSQL",
+        "Render",
+        "JavaScript"
       ],
-      "url": null,
-      "demo": null,
-      "status": "en desarrollo",
-      "featured": false
+      "url": "https://github.com/jmontesv/gestor-tareas-avanzado",
+      "demo": "https://gestor-tareas-avanzado.onrender.com/",
+      "status": "Terminado",
+      "featured": true
     }
+
   ],
   "skills": {
     "languages": [
@@ -138,9 +117,9 @@
       "React",
       "Flask",
       "React Native",
-      "Vite",
+      "Django",
       "ShadCN",
-      "Angular"
+      "Tailwind"
     ],
     "tools": [
       "Git",
@@ -148,12 +127,19 @@
       "Firebase",
       "Vercel",
       "Render",
-      "Docker"
+      "Docker",
+      "VS Code",
+      "Postman",
+      "Figma",
+      "Trello"
     ],
     "other": [
-      "REST APIs",
-      "Arquitectura por capas",
-      "Agile"
+      "Capacidad de adaptación",
+      "Trabajo en equipo",
+      "Comunicación efectiva",
+      "Resolución de problemas",
+      "Aprendizaje continuo",
+      "Metodologías ágiles (SCRUM)"
     ]
   },
   "education": [
